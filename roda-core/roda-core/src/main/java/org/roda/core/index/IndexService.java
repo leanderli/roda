@@ -22,7 +22,6 @@ import java.util.Optional;
 import org.apache.commons.io.IOUtils;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.common.util.DateUtil;
 import org.roda.core.RodaCoreFactory;
 import org.roda.core.common.ReturnWithExceptions;
 import org.roda.core.common.iterables.CloseableIterable;
@@ -368,7 +367,7 @@ public class IndexService {
   }
 
   public void deleteActionLog(Date until) throws SolrServerException, IOException {
-    String dateString = DateUtil.getThreadLocalDateFormat().format(until);
+    String dateString = SolrUtils.formatDate(until);
     String query = RodaConstants.LOG_DATETIME + ":[* TO " + dateString + "]";
     getSolrClient().deleteByQuery(RodaConstants.INDEX_ACTION_LOG, query);
     getSolrClient().commit(RodaConstants.INDEX_ACTION_LOG);

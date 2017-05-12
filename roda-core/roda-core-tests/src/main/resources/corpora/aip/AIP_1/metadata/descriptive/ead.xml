@@ -15,7 +15,7 @@
   <did>
     <unitid repositorycode="PT-KEEPS">395</unitid>
     <unittitle>My example</unittitle>
-    <unitdate normal="0001-01-01/0002-01-01"></unitdate>
+    <unitdate normal="2001-01-01/2002-01-01"></unitdate>
     <physdesc></physdesc>
     <origination>KEEPS</origination>
   </did>

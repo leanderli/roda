@@ -130,8 +130,10 @@
 		<spring.version>4.1.1.RELEASE</spring.version>
 		<grizzly.version>2.3.16</grizzly.version>
 		<jena.version>2.13.0</jena.version>
-		<solr.version>5.5.3</solr.version>
+		<solr.version>6.5.1</solr.version>
 		<akka.version>2.4.16</akka.version>
+		<!-- 20160818 hsilva: versions M22 & M23 don't work properly with RODA code base -->
+		<apacheds.version>2.0.0-M21</apacheds.version>
 		<httpcomponents.version>4.5.3</httpcomponents.version>
 		<poi.version>3.13</poi.version>
 		<commons_ip.version>1.0.0-alpha30</commons_ip.version>
@@ -426,7 +428,7 @@
 						<!-- this is false by default, forces the plugin to generate the file -->
 						<generateGitPropertiesFile>true</generateGitPropertiesFile>
 
-						<!-- The path for the properties file to be generated. See Super Pom
+						<!-- The path for the properties file to be generated. See Super Pom 
 							for default variable reference https://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->
 						<generateGitPropertiesFilename>
 							${project.build.directory}/${project.build.finalName}/version.json
@@ -785,13 +787,13 @@
 			</dependency>
 			<!-- CAS related dependencies - end -->
 			<!-- ApacheDS related dependencies - start -->
-			<dependency>
-				<groupId>org.apache.directory.server</groupId>
-				<artifactId>apacheds-all</artifactId>
-				<!-- 20160818 hsilva: versions M22 & M23 don't work properly with RODA
-					code base -->
-				<version>2.0.0-M21</version>
-			</dependency>
+<!-- 			<dependency> -->
+<!-- 				<groupId>org.apache.directory.server</groupId> -->
+<!-- 				<artifactId>apacheds-all</artifactId> -->
+<!-- 				<version>2.0.0-M21</version> -->
+<!-- 			</dependency> -->
+
+			
 			<dependency>
 				<groupId>net.sf.ehcache</groupId>
 				<artifactId>ehcache</artifactId>

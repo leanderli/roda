@@ -11,6 +11,11 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Serializable;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.TemporalAccessor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -47,8 +52,9 @@ import org.apache.solr.common.SolrException;
 import org.apache.solr.common.SolrInputDocument;
 import org.apache.solr.common.SolrInputField;
 import org.apache.solr.common.params.FacetParams;
-import org.apache.solr.common.util.DateUtil;
 import org.apache.solr.handler.loader.XMLLoader;
+import org.joda.time.DateTime;
+import org.joda.time.format.ISODateTimeFormat;
 import org.roda.core.common.MetadataFileUtils;
 import org.roda.core.common.PremisV3Utils;
 import org.roda.core.common.RodaUtils;
@@ -533,6 +539,21 @@ public class SolrUtils {
     return ret;
   }
 
+  public static Date parseDate(String date) throws ParseException {
+    Date ret;
+    if (date != null) {
+      SimpleDateFormat iso8601DateFormat = new SimpleDateFormat(RodaConstants.ISO8601_NO_MILLIS);
+      ret = iso8601DateFormat.parse(date);
+    } else {
+      ret = null;
+    }
+    return ret;
+  }
+
+  public static String formatDate(Date date) {
+    return DateTimeFormatter.ISO_INSTANT.format(date.toInstant());
+  }
+
   private static Date objectToDate(Object object) {
     Date ret;
     if (object == null) {
@@ -697,7 +718,7 @@ public class SolrUtils {
       Object value = doc.get(RodaConstants.AIP_DATE_INITIAL).getValue();
       if (value instanceof String) {
         try {
-          Date d = DateUtil.parseDate((String) value);
+          Date d = parseDate((String) value);
           doc.setField(RodaConstants.AIP_DATE_INITIAL, d);
         } catch (ParseException pe) {
           doc.remove(RodaConstants.AIP_DATE_INITIAL);
@@ -710,7 +731,7 @@ public class SolrUtils {
       Object value = doc.get(RodaConstants.AIP_DATE_FINAL).getValue();
       if (value instanceof String) {
         try {
-          Date d = DateUtil.parseDate((String) value);
+          Date d = parseDate((String) value);
           doc.setField(RodaConstants.AIP_DATE_FINAL, d);
         } catch (ParseException pe) {
           doc.remove(RodaConstants.AIP_DATE_FINAL);
@@ -895,7 +916,7 @@ public class SolrUtils {
   private static <T extends Serializable> void generateRangeValue(StringBuilder ret, Class<T> valueClass, T value) {
     if (value != null) {
       if (valueClass.equals(Date.class)) {
-        String date = DateUtil.getThreadLocalDateFormat().format(Date.class.cast(value));
+        String date = formatDate(Date.class.cast(value));
         LOGGER.trace("Appending date value \"{}\" to range", date);
         ret.append(date);
       } else if (valueClass.equals(Long.class)) {
@@ -942,7 +963,7 @@ public class SolrUtils {
     final String ret;
 
     if (fromValue != null) {
-      return DateUtil.getThreadLocalDateFormat().format(fromValue);
+      return formatDate(fromValue);
     } else {
       ret = "*";
     }
@@ -958,7 +979,7 @@ public class SolrUtils {
     final String ret;
     StringBuilder sb = new StringBuilder();
     if (toValue != null) {
-      sb.append(DateUtil.getThreadLocalDateFormat().format(toValue));
+      sb.append(formatDate(toValue));
       switch (granularity) {
         case YEAR:
           sb.append("+1YEAR-1MILLISECOND");
@@ -995,7 +1016,7 @@ public class SolrUtils {
   }
 
   public static String getLastScanDate(Date scanDate) {
-    return DateUtil.getThreadLocalDateFormat().format(scanDate);
+    return formatDate(scanDate);
   }
 
   /*

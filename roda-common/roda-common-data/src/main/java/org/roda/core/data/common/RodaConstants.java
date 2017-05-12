@@ -43,6 +43,7 @@ public final class RodaConstants {
    */
   public static final String INSTALL_FOLDER_ENVIRONEMNT_VARIABLE = "RODA_HOME";
   public static final String ISO8601 = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+  public static final String ISO8601_NO_MILLIS = "yyyy-MM-dd'T'HH:mm:ssZ";
   public static final String SIMPLE_DATE_FORMATTER = "yyyy-MM-dd";
   public static final String SHA1 = "SHA-1";
   public static final String SHA256 = "SHA-256";

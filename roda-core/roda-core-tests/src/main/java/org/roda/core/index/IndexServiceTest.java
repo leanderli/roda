@@ -202,8 +202,8 @@ public class IndexServiceTest {
     assertEquals("fonds", indexedAip.getLevel());
     assertEquals("My example", indexedAip.getTitle());
     assertEquals("This is a very nice example", indexedAip.getDescription());
-    assertEquals(RodaUtils.parseDate("0001-01-01T00:00:00.000+0000"), indexedAip.getDateInitial());
-    assertEquals(RodaUtils.parseDate("0002-01-01T00:00:00.000+0000"), indexedAip.getDateFinal());
+    assertEquals(RodaUtils.parseDate("2001-01-01T00:00:00.000+0000"), indexedAip.getDateInitial());
+    assertEquals(RodaUtils.parseDate("2002-01-01T00:00:00.000+0000"), indexedAip.getDateFinal());
 
     // Retrieve, count and list SRO
     String rep1Id = aip.getRepresentations().get(0).getId();
@@ -253,10 +253,10 @@ public class IndexServiceTest {
       .getResults().get(0);
     Calendar calInitial = Calendar.getInstance();
     calInitial.setTime(indexedAip.getDateInitial());
-    assertEquals(calInitial.get(Calendar.YEAR), CorporaConstants.YEAR_1213);
+    assertEquals(CorporaConstants.YEAR_1213, calInitial.get(Calendar.YEAR));
     Calendar calFinal = Calendar.getInstance();
     calFinal.setTime(indexedAip.getDateFinal());
-    assertEquals(calFinal.get(Calendar.YEAR), CorporaConstants.YEAR_2003);
+    assertEquals(CorporaConstants.YEAR_2003, calFinal.get(Calendar.YEAR));
 
   }
 
