@@ -11,6 +11,7 @@
 package org.roda.wui.common.client.widgets;
 
 import org.roda.core.data.exceptions.GenericException;
+import org.roda.wui.client.common.utils.JavascriptUtils;
 import org.roda.wui.client.main.Theme;
 import org.roda.wui.common.client.ClientLogger;
 import org.roda.wui.common.client.tools.HistoryUtils;
@@ -50,27 +51,50 @@ public class HTMLWidgetWrapper extends HTML {
 
   public HTMLWidgetWrapper(String resourceId, final AsyncCallback<Void> callback) {
     String id = resourceId;
+    boolean isMarkdown = false;
     if (id.endsWith(".html")) {
       id = id.substring(0, id.length() - 5);
+    }if (id.endsWith(".md")) {
+      isMarkdown = true;
+      id = id.substring(0, id.length() - 3);
     }
 
     String locale = LocaleInfo.getCurrentLocale().getLocaleName();
-    String localizedResourceId = id + "_" + locale + ".html";
-    String defaultResourceId = id + ".html";
+
+    String localizedResourceId;
+    String defaultResourceId;
+    if(isMarkdown){
+      localizedResourceId = id + "_" + locale + ".md";
+      defaultResourceId = id + ".md";
+    }else {
+      localizedResourceId = id + "_" + locale + ".html";
+      defaultResourceId = id + ".html";
+    }
 
     RequestBuilder request = new RequestBuilder(RequestBuilder.GET,
       RestUtils.createThemeResourceUri(localizedResourceId, defaultResourceId, false).asString());
 
+    final boolean transformMarkdownIntoHTML = isMarkdown;
     try {
       request.sendRequest(null, new RequestCallback() {
 
         @Override
         public void onResponseReceived(Request request, Response response) {
           if (response.getStatusCode() == 200) {
-            HTMLWidgetWrapper.this.setHTML(response.getText());
+            String html;
+            if(transformMarkdownIntoHTML){
+              html = markdownToHtml(response.getText());
+            }else{
+              html = response.getText();
+            }
+            HTMLWidgetWrapper.this.setHTML(html);
             callback.onSuccess(null);
           } else if (response.getStatusCode() == 404) {
-            HistoryUtils.newHistory(Theme.RESOLVER, "Error404.html");
+            if(transformMarkdownIntoHTML){
+              HistoryUtils.newHistory(Theme.RESOLVER, "Error404.md");
+            }else{
+              HistoryUtils.newHistory(Theme.RESOLVER, "Error404.html");
+            }
           } else {
             logger.error("Error sending request");
             callback.onFailure(new GenericException("Error sending request"));
@@ -87,6 +111,11 @@ public class HTMLWidgetWrapper extends HTML {
       logger.error("Error sending request", exception);
     }
   }
+
+  private static native String markdownToHtml(String markdownText) /*-{
+      var conv = new $wnd.showdown.Converter({flavor: 'github'});
+      return "<div class=\"static-page max-width markdown\">" + conv.makeHtml(markdownText) + "</div>";
+  }-*/;
 
   public void onCompletion(String responseText) {
     this.setHTML(responseText);
