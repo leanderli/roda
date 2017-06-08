@@ -11,7 +11,6 @@
 package org.roda.wui.common.client.widgets;
 
 import org.roda.core.data.exceptions.GenericException;
-import org.roda.wui.client.common.utils.JavascriptUtils;
 import org.roda.wui.client.main.Theme;
 import org.roda.wui.common.client.ClientLogger;
 import org.roda.wui.common.client.tools.HistoryUtils;
@@ -23,6 +22,7 @@ import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.i18n.client.LocaleInfo;
+import com.google.gwt.regexp.shared.RegExp;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.HTML;
 
@@ -54,7 +54,8 @@ public class HTMLWidgetWrapper extends HTML {
     boolean isMarkdown = false;
     if (id.endsWith(".html")) {
       id = id.substring(0, id.length() - 5);
-    }if (id.endsWith(".md")) {
+    }
+    if (id.endsWith(".md")) {
       isMarkdown = true;
       id = id.substring(0, id.length() - 3);
     }
@@ -63,10 +64,10 @@ public class HTMLWidgetWrapper extends HTML {
 
     String localizedResourceId;
     String defaultResourceId;
-    if(isMarkdown){
+    if (isMarkdown) {
       localizedResourceId = id + "_" + locale + ".md";
       defaultResourceId = id + ".md";
-    }else {
+    } else {
       localizedResourceId = id + "_" + locale + ".html";
       defaultResourceId = id + ".html";
     }
@@ -82,17 +83,27 @@ public class HTMLWidgetWrapper extends HTML {
         public void onResponseReceived(Request request, Response response) {
           if (response.getStatusCode() == 200) {
             String html;
-            if(transformMarkdownIntoHTML){
+            if (transformMarkdownIntoHTML) {
               html = markdownToHtml(response.getText());
-            }else{
+
+              // fix links to other markdown files by replacing them with
+              // proper "#theme/*.md" links
+              RegExp regExp = RegExp.compile("<a href=\"(?:(?![a-zA-Z]+:\\/\\/))(?:(?![#/]))(.*?\\.md)\">", "g");
+              // work around the URL-encode on $
+              String filenameToken = "replace-with-capture-group";
+              String replacement = ("<a href=\"" + HistoryUtils.createHistoryHashLink(Theme.RESOLVER, filenameToken)
+                + "\">").replace(filenameToken, "$1");
+
+              html = regExp.replace(html, replacement);
+            } else {
               html = response.getText();
             }
             HTMLWidgetWrapper.this.setHTML(html);
             callback.onSuccess(null);
           } else if (response.getStatusCode() == 404) {
-            if(transformMarkdownIntoHTML){
+            if (transformMarkdownIntoHTML) {
               HistoryUtils.newHistory(Theme.RESOLVER, "Error404.md");
-            }else{
+            } else {
               HistoryUtils.newHistory(Theme.RESOLVER, "Error404.html");
             }
           } else {
@@ -113,9 +124,9 @@ public class HTMLWidgetWrapper extends HTML {
   }
 
   private static native String markdownToHtml(String markdownText) /*-{
-      var conv = new $wnd.showdown.Converter({flavor: 'github'});
-      return "<div class=\"static-page max-width markdown\">" + conv.makeHtml(markdownText) + "</div>";
-  }-*/;
+                                                                   var conv = new $wnd.showdown.Converter({flavor: 'github'});
+                                                                   return "<div class=\"static-page max-width markdown\">" + conv.makeHtml(markdownText) + "</div>";
+                                                                   }-*/;
 
   public void onCompletion(String responseText) {
     this.setHTML(responseText);
