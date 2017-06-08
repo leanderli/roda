@@ -1,7 +1,7 @@
 {
-  "base": "x",
+  "base": "roda-ui/roda-wui/src/main/resources/config/",
   "pages": [
-    "y",
-    "z"
+    "Acknowledgements.md",
+    "CAS.md"
   ]
 }
