@@ -1,5 +1,5 @@
 {
-  "base": "roda-ui/roda-wui/src/main/resources/config/",
+  "base": "roda-ui/roda-wui/src/main/resources/config/theme/",
   "pages": [
     "Acknowledgements.md",
     "CAS.md"
