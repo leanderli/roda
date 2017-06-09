@@ -5975,6 +5975,6 @@ td.datePickerMonth, td.datePickerYear {
  MARKDOWN STYLING
 ****************************************/
 
-.markdown {
-
+.markdown img {
+    max-width: 100%;
 }
