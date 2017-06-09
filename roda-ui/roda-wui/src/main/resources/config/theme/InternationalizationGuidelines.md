@@ -1,6 +1,8 @@
+#Internationalization Guidelines
+
 Now there is a new easier way to translate RODA to another language, with no need for technical skills, using Transifex. To check how to translate RODA using just source code please refer to the section "Translate using source code" below.
 
-# Translate using Transifex
+## Translate using Transifex
 
 To start, go the site [https://www.transifex.com/roda-1/roda2/](https://www.transifex.com/roda-1/roda2/) and click the button **"Help translate RODA"**. 
 
@@ -9,7 +11,7 @@ If you don't have an account create one or select one of the easy sign-up option
 If your language is not on the list, click the button "Request language" for us to evaluate adding this new language to RODA.
 
 
-# Translate using source code
+## Translate using source code
 
 To translate RODA to a new language one needs to get the source files (as explained in the [Developer guide](Developer-guide#wiki-get-source-code)) and add new message files for the new language.
 The existing message files containing localizable texts are listed below on RODA-WUI project (roda-ui/roda-wui).
@@ -20,7 +22,7 @@ The existing message files containing localizable texts are listed below on RODA
 
 When changing client properties, it is necessary to [recompile the project](https://github.com/keeps/roda/wiki/Developer-guide#build) to update them.
 
-## Add a new language
+### Add a new language
 
 To add a new language (French, for example) to RODA-IN, one needs create a new text file  **src/main/resources/messages_fr.properties** or copy one of the existing ones in the same directory (like messages_en.properties) and replace the English sentences and words by the French versions, like in the following example.
 
@@ -41,7 +43,7 @@ MainPanel.error.CREATE_SIP=Une erreur s'est produite lors de la création de pac
 ...
 ```
 
-### RODA-WUI
+#### RODA-WUI
 
 To add a new language (French, for example) to RODA-WUI, besides creating new message files like explained before, one needs to do the following steps for the new language appears in the interface:
 

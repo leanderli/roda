@@ -1,3 +1,5 @@
+# REST API
+
 RODA is completely controlled via a REST API. This is great to develop external services or integrate other applications  with the repository. The documentation of the API is available at https://demo.roda-community.org/api-docs/.
 
 ## Developing 3rd party integrations

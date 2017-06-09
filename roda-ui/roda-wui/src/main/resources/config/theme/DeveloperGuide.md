@@ -1,3 +1,5 @@
+# Developer Guide
+
 ## How to get the source code
 
 You can easily get the source code by cloning the project into your machine (just need git installed):
