@@ -1,6 +1,8 @@
-### Too many open files
+# Troubleshooting
 
-Sometimes in logs, you will see errors like:
+**Error: Too many open files**
+
+Sometimes in logs, you may see errors like:
 
 ```
 RODA_HOME/logs/roda-wui.log:pt.gov.dgarq.roda.core.common.RODAClientException: Error connecting to Login service - Too many open files
