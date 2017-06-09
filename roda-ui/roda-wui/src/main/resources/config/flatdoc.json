@@ -19,7 +19,6 @@
       "Usage": [
         {"Quickstart.md": "quick-start"},
         {"PreIngest.md": "ingest"},
-        {"AdvancedSearch.md": "advanced-search"},
         {"RiskAssessment.md": "risk-assessment"},
         {"FAQs.md": "frequently-asked-questions"},
         {"Troubleshooting.md": "troubleshooting"}
