@@ -1,10 +1,8 @@
 {
   "base": "roda-ui/roda-wui/src/main/resources/config/theme/",
   "pages": [
-    "Introduction.md",
     {
       "Installation": [
-        {"InstallTesting.md": "z"},
         {"InstallProduction.md": "z"}
       ]
     },
@@ -28,7 +26,6 @@
     },
     {
       "Development": [
-        {"DeveloperGuide.md": "z"},
         {"InternationalizationGuidelines.md": "z"},
         {"REST-API.md": "z"},
         {"License.md": "z"}
