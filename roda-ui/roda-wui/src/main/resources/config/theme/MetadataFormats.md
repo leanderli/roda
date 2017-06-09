@@ -21,7 +21,7 @@ Each class of objects has a preservation format, defined on the first section be
 | Spreadsheet | Microsoft Excel Open XML document | application/vnd.openxmlformats-officedocument.spreadsheetml<br>fmt/214 <br>.xlsx |
 | Spreadsheet | Open Office Spreadsheet | application/ vnd.oasis.opendocument.spreadsheet<br>fmt/137, fmt/294, fmt/295 <br>.ods |
 | Image | TIFF | image/tiff<br>fmt/152, x-fmt/399, x-fmt/388, x-fmt/387, fmt/155, fmt/353, fmt/154, fmt/153, fmt/156 <br>.tiff .tif |
-| Image | JPEG | image/jpeg<br>fmt/41, fmt/42, x-fmt/398, x-fmt/390, x-fmt/391, fmt/43, fmt/44, fmt/112 |<br>.jpeg .jpg |
+| Image | JPEG | image/jpeg<br>fmt/41, fmt/42, x-fmt/398, x-fmt/390, x-fmt/391, fmt/43, fmt/44, fmt/112 <br>.jpeg .jpg |
 | Image | PNG | image/png<br>fmt/11,fmt/12,fmt/13 <br>.png |
 | Image | BMP | image/bmp<br>x-fmt/270,fmt/115,fmt/118,fmt/119,fmt/114,fmt/116,fmt/117 <br>.bmp |
 | Image | GIF | image/gif<br>fmt/3, fmt/4 <br>.gif |
