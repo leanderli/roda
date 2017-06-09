@@ -4,33 +4,33 @@
     "Introduction.md",
     {
       "Installation": [
-        {"InstallTesting.md": "z"},
-        {"InstallProduction.md": "z"}
+        {"InstallTesting.md": "install-for-testing"},
+        {"InstallProduction.md": "install-for-production"}
       ]
     },
     {
       "Configuration": [
-        {"MetadataFormats.md": "z"},
-        {"StaticPages.md": "z"},
-        {"CAS.md": "z"}
+        {"MetadataFormats.md": "metadata-formats"},
+        {"StaticPages.md": "static-pages"},
+        {"CAS.md": "cas"}
       ]
     },
     {
       "Usage": [
-        {"Quickstart.md": "z"},
-        {"PreIngest.md": "z"},
-        {"AdvancedSearch.md": "z"},
-        {"RiskAssessment.md": "z"},
-        {"FAQs.md": "z"},
-        {"Troubleshooting.md": "z"}
+        {"Quickstart.md": "quick-start"},
+        {"PreIngest.md": "ingest"},
+        {"AdvancedSearch.md": "advanced-search"},
+        {"RiskAssessment.md": "risk-assessment"},
+        {"FAQs.md": "frequently-asked-questions"},
+        {"Troubleshooting.md": "troubleshooting"}
       ]
     },
     {
       "Development": [
-        {"DeveloperGuide.md": "z"},
-        {"InternationalizationGuidelines.md": "z"},
-        {"REST-API.md": "z"},
-        {"License.md": "z"}
+        {"DeveloperGuide.md": "developer-guide"},
+        {"InternationalizationGuidelines.md": "internationalization-guidelines"},
+        {"REST-API.md": "rest-api"},
+        {"License.md": "license"}
       ]
     }
   ]
