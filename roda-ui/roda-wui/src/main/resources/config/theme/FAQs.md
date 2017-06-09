@@ -2,26 +2,24 @@
 
 Frequent questions that are asked by RODA users and their answers.
 
-**Questions**
-* [How to add a new language to the system?](./Frequent-Asked-Questions/#how-to-add-a-new-language-to-the-system)
-* [How to set up the development environment for RODA?](./Frequent-Asked-Questions#how-to-set-up-the-development-environment-for-roda)
-* [How does the Preservation process work? How often does it work? How can it be configured? How can it be tested?](./Frequent-Asked-Questions#how-does-the-preservation-process-work-how-often-does-it-work-how-can-it-be-configured-how-can-it-be-tested) 
-
-
 **Have a question that is not here?** [Create an issue](https://github.com/keeps/roda/issues/new) and mark it with a "question" label.
 
 
 ***
 
-### How to add a new language to the system?
+**Question: How to add a new language to the system?**
 
 Complete instructions on how to add a new language to the system are available at: https://github.com/keeps/roda/wiki/RODA-i18n-guidelines
 
-### How to set up the development environment for RODA?
+***
+
+**Question: How to set up the development environment for RODA?**
 
 Complete instructions on how to set up the development environment are available at: https://github.com/keeps/roda/wiki/Developer-guide#wiki-dev-env
 
-### How does the Preservation process work? How often does it work? How can it be configured? How can it be tested?
+***
+
+**Question: How does the Preservation process work? How often does it work? How can it be configured? How can it be tested?**
 
 The preservation process can work in two different ways:
 
