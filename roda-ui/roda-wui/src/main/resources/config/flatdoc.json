@@ -1,7 +1,38 @@
 {
   "base": "roda-ui/roda-wui/src/main/resources/config/theme/",
   "pages": [
-    "Acknowledgements.md",
-    "CAS.md"
+    "Introduction.md",
+    {
+      "Installation": [
+        {"InstallTesting": "z"},
+        {"InstallProduction": "z"}
+      ]
+    },
+    {
+      "Configuration": [
+        {"MetadataFormats.md": "z"},
+        {"Statistics.md": "z"},
+        {"StaticPages.md": "z"},
+        {"CAS.md": "z"}
+      ]
+    },
+    {
+      "Usage": [
+        {"Quickstart.md": "z"},
+        {"PreIngest.md": "z"},
+        {"AdvancedSearch.md": "z"},
+        {"RiskAssessment.md": "z"},
+        {"FAQs.md": "z"},
+        {"Troubleshooting.md": "z"}
+      ]
+    },
+    {
+      "Development": [
+        {"DeveloperGuide.md": "z"},
+        {"InternationalizationGuidelines.md": "z"},
+        {"REST-API.md": "z"},
+        {"License.md": "z"}
+      ]
+    }
   ]
 }
