@@ -59,9 +59,9 @@ Just install [Kitematic](https://kitematic.com), and search for "roda". Install 
 
 Kitematic is like an AppStore that automates the Docker installation and setup process and provides an intuitive graphical user interface (GUI) for running Docker containers (i.e. lightweight Virtual Machines).
 
-![Search and install](static/images/kitematic_search.png "Search and install RODA in Kitematic")
+![Search and install](images/kitematic_search.png "Search and install RODA in Kitematic")
 
-![Open](static/images/kitematic_open.png "Open RODA in Kitematic")
+![Open](images/kitematic_open.png "Open RODA in Kitematic")
 
 **NOTE**: The RODA docker container has some limitations on Windows due to filename incompatibilities. This means that your will be limited to the storage capacity within the container. If you change the default configuration to use the storage of the host machine it will not work.
 

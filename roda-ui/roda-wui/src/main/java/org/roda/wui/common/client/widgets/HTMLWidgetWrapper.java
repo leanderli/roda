@@ -86,15 +86,28 @@ public class HTMLWidgetWrapper extends HTML {
             if (transformMarkdownIntoHTML) {
               html = markdownToHtml(response.getText());
 
+              // work around the URL-encode on the $ character
+              String filenameToken = "replace-with-capture-group";
+
               // fix links to other markdown files by replacing them with
               // proper "#theme/*.md" links
-              RegExp regExp = RegExp.compile("<a href=\"(?:(?![a-zA-Z]+:\\/\\/))(?:(?![#/]))(.*?\\.md)\">", "g");
-              // work around the URL-encode on $
-              String filenameToken = "replace-with-capture-group";
-              String replacement = ("<a href=\"" + HistoryUtils.createHistoryHashLink(Theme.RESOLVER, filenameToken)
+              RegExp mdRegExp = RegExp.compile("<a href=\"(?:(?![a-zA-Z]+:\\/\\/))(?:(?![#/]))(.*?\\.md)\">", "g");
+              String mdReplacement = ("<a href=\"" + HistoryUtils.createHistoryHashLink(Theme.RESOLVER, filenameToken)
                 + "\">").replace(filenameToken, "$1");
 
-              html = regExp.replace(html, replacement);
+              html = mdRegExp.replace(html, mdReplacement);
+
+              // <img src="images/kitematic_search.png" alt="Search and install"
+              // title="Search and install RODA in Kitematic">
+
+              // fix image links by replacing them with proper
+              // "#theme/images/..." links
+              RegExp imgRegExp = RegExp.compile("<img src=\"(images/.*?)\"", "g");
+              String imgReplacement = ("<img src=\""
+                + RestUtils.createThemeResourceUri(filenameToken, null, false).asString() + "\"").replace(filenameToken,
+                  "$1");
+
+              html = imgRegExp.replace(html, imgReplacement);
             } else {
               html = response.getText();
             }
