@@ -52,8 +52,6 @@ The following search operators are at your disposal:
 
 The pre-ingest process depicts the ability of a Producer to create Submission Information Packages (SIP) containing both data and metadata (in a well-defined structure) in order to submit them to the repository for ingest. The SIPs created are expected to comply to the policies established by (or negotiated with) the repository.
 
-==aqui ou numa página específica?==
-
 ## Ingest transfer
 
 The Transfer area provides the appropriate temporary storage to receive Submission Information Packages (SIP) from Producers. SIPs may be delivered via electronic transfer (e.g. FTP) or loaded from media attached to the repository. This page also enables the user to search files in the temporary transfer area, create/delete folders and upload multiple SIPs to the repository at the same time for further processing and ingest. The ingest process may be initiated by selecting the SIPs you wish to include in the processing batch. Click the "Process" button to initiate the ingest process.
