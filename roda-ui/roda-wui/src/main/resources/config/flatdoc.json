@@ -4,8 +4,8 @@
     "Introduction.md",
     {
       "Installation": [
-        {"InstallTesting": "z"},
-        {"InstallProduction": "z"}
+        {"InstallTesting.md": "z"},
+        {"InstallProduction.md": "z"}
       ]
     },
     {
