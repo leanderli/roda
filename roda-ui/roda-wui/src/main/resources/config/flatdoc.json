@@ -4,32 +4,32 @@
     "Introduction.md",
     {
       "Installation": [
-        {"InstallTesting.md": "install-for-testing"},
-        {"InstallProduction.md": "install-for-production"}
+        "InstallTesting.md",
+        "InstallProduction.md"
       ]
     },
     {
       "Configuration": [
-        {"MetadataFormats.md": "metadata-formats"},
-        {"StaticPages.md": "static-pages"},
-        {"CAS.md": "cas"}
+        "MetadataFormats.md",
+        "StaticPages.md",
+        "CAS.md"
       ]
     },
     {
       "Usage": [
-        {"Quickstart.md": "quick-start"},
-        {"PreIngest.md": "ingest"},
-        {"RiskAssessment.md": "risk-assessment"},
-        {"FAQs.md": "frequently-asked-questions"},
-        {"Troubleshooting.md": "troubleshooting"}
+        "Quickstart.md",
+        "PreIngest.md",
+        "RiskAssessment.md",
+        "FAQs.md",
+        "Troubleshooting.md"
       ]
     },
     {
       "Development": [
-        {"DeveloperGuide.md": "developer-guide"},
-        {"InternationalizationGuidelines.md": "internationalization-guidelines"},
-        {"REST-API.md": "rest-api"},
-        {"License.md": "license"}
+        "DeveloperGuide.md",
+        "InternationalizationGuidelines.md",
+        "REST-API.md",
+        "License.md"
       ]
     }
   ]
