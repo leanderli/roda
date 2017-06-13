@@ -57,7 +57,8 @@ public class HTMLWidgetWrapper extends HTML {
     }
     if (id.endsWith(".md")) {
       isMarkdown = true;
-      id = id.substring(0, id.length() - 3);
+      // TODO bferreira: move "markdown/" to a constant
+      id = "markdown/" + id.substring(0, id.length() - 3);
     }
 
     String locale = LocaleInfo.getCurrentLocale().getLocaleName();
@@ -103,9 +104,10 @@ public class HTMLWidgetWrapper extends HTML {
               // fix image links by replacing them with proper
               // "#theme/images/..." links
               RegExp imgRegExp = RegExp.compile("<img src=\"(images/.*?)\"", "g");
+              // TODO bferreira: move "markdown/" to a constant
               String imgReplacement = ("<img src=\""
                 + RestUtils.createThemeResourceUri(filenameToken, null, false).asString() + "\"").replace(filenameToken,
-                  "$1");
+                  "markdown/$1");
 
               html = imgRegExp.replace(html, imgReplacement);
             } else {

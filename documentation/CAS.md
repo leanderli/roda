@@ -1,4 +1,4 @@
-# CAS
+# Central Authentication Service (CAS)
 
 RODA has support for [Central Authentication Service](https://en.wikipedia.org/wiki/Central_Authentication_Service) (**CAS**).
 
@@ -18,6 +18,7 @@ For these instructions, we're assuming the LDAP server has the following charact
 Change the values to match your LDAP.
 
 1. Get CAS Overlay Template
+
     ```
     git clone -b 4.2 https://github.com/apereo/cas-overlay-template.git
     cd cas-overlay-template
@@ -26,22 +27,27 @@ Change the values to match your LDAP.
 2. Open file **etc/cas.properties** and edit the following parts:
 
     * Change server.name to https://localhost:8443
+
     ```bash
     server.name=https://localhost:8443
     ```
 
     * Uncomment the following line and set the value to true
+
     ```bash
     cas.logout.followServiceRedirects=true
     ```
 
     * Uncomment the following line and set the value to file:/etc/cas/services
+
     ```bash
     service.registry.config.location=file:/etc/cas/services
     ```
 
     * Add these lines with LDAP configuration
+
     **NOTE**: Change the LDAP values to match your LDAP setup.
+
     ```bash
     #========================================
     # LDAP General properties
