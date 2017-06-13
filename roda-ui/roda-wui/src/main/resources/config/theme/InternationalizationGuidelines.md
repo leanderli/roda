@@ -1,4 +1,4 @@
-#Internationalization Guidelines
+# Internationalization Guidelines
 
 Now there is a new easier way to translate RODA to another language, with no need for technical skills, using Transifex. To check how to translate RODA using just source code please refer to the section "Translate using source code" below.
 

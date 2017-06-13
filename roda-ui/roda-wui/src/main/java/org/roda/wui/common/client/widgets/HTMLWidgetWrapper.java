@@ -136,10 +136,8 @@ public class HTMLWidgetWrapper extends HTML {
     }
   }
 
-  private static native String markdownToHtml(String markdownText) /*-{
-                                                                   var conv = new $wnd.showdown.Converter({flavor: 'github'});
-                                                                   return "<div class=\"static-page max-width markdown\">" + conv.makeHtml(markdownText) + "</div>";
-                                                                   }-*/;
+  private static native String markdownToHtml(String markdownText)
+  /*-{ return "<div class=\"static-page max-width markdown\">" + $wnd.marked(markdownText) + "</div>"; }-*/;
 
   public void onCompletion(String responseText) {
     this.setHTML(responseText);
