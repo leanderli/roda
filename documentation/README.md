@@ -9,27 +9,27 @@ This page links to an assortment of **technical information articles** that will
 
 Among others articles, in this series of documentation you will find information on:
 
-- Overview
+- [Overview](Overview.md)
 - Usage
-	- Quick start
-	- Advanced search
-	- Pre-ingest
-	- Risk assessment
-	- Format normalization policy
+	- [Quick start](Quickstart.md)
+	- [Advanced search](Advanced_Search.md)
+	- [Pre-ingest](Pre_Ingest.md)
+	- [Risk assessment](Risk_Assessment.md)
+	- [Format normalization policy](Format_Normalization_Policy.md)
 - Support
-	- Community support	
-	- Professional support
+	- [Community support](Community_Support.md)	
+	- [Professional support](Professional_Support.md)
 - Installation
-	- Demo
-	- Production
+	- [Demo](Installation_Testing_Environments.md)
+	- [Production](Installation_Production_Environments.md)
 - Configuration
-	- Statistics
-	- Metadata formats
-	- Central Authentication Service (CAS)
+	- [Statistics](Statistics.md)
+	- [Metadata formats](Metadata_Formats.md)
+	- [Central Authentication Service (CAS)](Central_Authentication_Service.md)
 - Contributing
-	- Developers guide
-	- Translation guide
-	- Documentation guide
-- Troubleshooting
-- Acknowledgements
-- License
+	- [Developers guide](Developers_Guide.md)
+	- [Translation guide](Translation_Guide.md)
+	- [Documentation guide](Documentation_Guide.md)
+- [Troubleshooting](Troubleshooting.md)
+- [Acknowledgements](Acknowledgements.md)
+- [License](License.md)
