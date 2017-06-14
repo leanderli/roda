@@ -1,8 +1,8 @@
-# Metadata formats
+# Format normalization policy
 
-RODA supports any file format, but only has rules and tools to automatically convert formats into preservation formats (normalization) to a limited set of file formats and object classes. New tools can easily be installed in RODA and new rules for file format normalization can be defined in the [normalization.properties](https://github.com/keeps/roda/blob/master/roda-installer/src/main/resources/files/core/config/plugins/normalization.properties) file. The default preservation formats and the default formats that can be normalized on ingest are defined below.
+RODA supports any file format, but only has tools to automatically convert formats into preservation formats (normalization) to a limited set of file formats and object classes. 
 
-Each class of objects has a preservation format, defined on the first section below. There are a list of file formats which belong to each class of objects, this relationship is defined on the second section below. To know which preservation format a ingested format is normalized to, find your ingested format on the second section on the first section.
+In this page you will find the default mapping between formats and object classes, and a table of recommendations for a normalization policy.
 
 ## Default mapping of ingested formats into object classes
 
@@ -49,7 +49,7 @@ Each class of objects has a preservation format, defined on the first section be
 | Email | EML | message/rfc822<br>fmt/278 <br>.eml |
 | Email | Microsoft Outlook email | application/vnd.ms-outlook<br>x-fmt/430, x-fmt/431 <br>.msg |
 
-## Default preservation formats for each object class
+## Recommended preservation formats for each object class
 
 | *Class* | *Format* | *MIME Type* | *Extensions* | *Description* |
 |---------|----------|-------------|--------------|---------------|
@@ -57,10 +57,6 @@ Each class of objects has a preservation format, defined on the first section be
 | Presentation | PDF/A | application/pdf | .pdf | PDF for archiving|
 | Spreadsheet | PDF/A | application/pdf | .pdf | PDF for archiving|
 | Image | METS+TIFF | image/mets+tiff | .xml .tiff | METS XML file with the structure and uncompressed TIFF images |
-| Database | DBML | application/dbml or application/dbml+octet-stream | .xml .bin | A DBML XML with all the database structure and data. If BLOBs exists, they are extracted to a file and added as octet streams |
 | Audio | Wave | audio/wav | .wav | Wave audio format |
 | Video | MPEG-2 | video/mpeg2 | .mpeg .mpg |MPEG 2 video format, with DVD internal structure |
-
-<sup>1</sup> _In RODA-in a JDBC is used to connect to the DBMS and import a database to DBML. Supported DBMS are: SQL Server, MySQL, PostgreSQL, Microsoft Access and Generic ODBC_
-
-<sup>2</sup> _Only if original format is also text/plain_
+| Database | SIARD 2 | TBD | TBD | TBD |

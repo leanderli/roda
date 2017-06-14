@@ -1,5 +1,5 @@
-# 404
+# Page not found!
 
 Could not find the requested page.
 
-[Welcome Page](#welcome)
+[Index](index.md)

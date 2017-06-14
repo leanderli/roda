@@ -1,6 +1,10 @@
 # Troubleshooting
 
-**Error: Too many open files**
+Troubleshooting is a form of problem solving, often applied to repair failed products. It is a logical, systematic search for the source of a problem in order to solve it, and make the product or process operational again. 
+
+In this section you will find common problems that affect this product, and potencial solutions on how to solve them.
+
+## Error: Too many open files
 
 Sometimes in logs, you may see errors like:
 

@@ -1,4 +1,4 @@
-# Risk Assessment
+# Risk assessment
 
 RODA comes with a Risk Registry pre-loaded with 80+ preservation risks obtained from the [Digital Repository Audit Method Based on Risk Assessment (DRAMBORA)](http://www.repositoryaudit.eu) toolkit developed by the [Digital Curation Centre (DCC)](http://www.dcc.ac.uk) and DigitalPreservationEurope (DPE).
 
@@ -30,6 +30,6 @@ What I just explained is the manual workflow, as we don’t currently have a for
 
 In what concerns available conversion plugins,  RODA currently supports the usual suspects (major image, video, word and audio formats). Niche formats will always exist in every institution, and in that case, special purpose plugins will have to be developed.
 
-## Developing new risk assessment plugins
+## Have an idea for a risk assessment plugin?
 
 If you are interested in develop a new Risk Assessment plugin, please contact the product team for further information.

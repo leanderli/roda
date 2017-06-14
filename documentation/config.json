@@ -1,36 +1,46 @@
 {
   "base": "documentation/",
   "pages": [
-    "Introduction.md",
+    "Overview.md",
+    {
+      "Usage": [
+        "Quickstart.md",
+        "Advanced_Search.md",
+        "Pre_Ingest.md",
+        "Risk_Assessment.md",
+        "Format_Normalization_Policy.md"
+      ]
+    },
+    {
+      "Support": [
+        "Professional_Support.md"
+      ]
+    },
     {
       "Installation": [
-        "InstallTesting.md",
-        "InstallProduction.md"
+        "Installation_Testing_Environments.md",
+        "Installation_Production_Environments.md"
       ]
     },
     {
       "Configuration": [
-        "MetadataFormats.md",
-        "StaticPages.md",
-        "CAS.md"
+        "Statistics.md",
+        "Metadata_Formats.md",
+        "Central_Authentication_Service.md"
       ]
     },
     {
-      "Usage": [
-        "Quickstart.md",
-        "PreIngest.md",
-        "RiskAssessment.md",
-        "FAQs.md",
-        "Troubleshooting.md"
+      "Contributing": [
+        "Developers_Guide.md",
+        "Translation_Guide.md",
+        "Documentation_Guide.md"
       ]
     },
-    {
-      "Development": [
-        "DeveloperGuide.md",
-        "InternationalizationGuidelines.md",
-        "REST-API.md",
-        "License.md"
-      ]
-    }
+    "Troubleshooting.md",
+    "Acknowledgements.md",
+    "License.md"
   ]
 }
+
+
+

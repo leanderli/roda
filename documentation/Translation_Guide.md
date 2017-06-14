@@ -1,6 +1,6 @@
-# Internationalization Guidelines
+# Translation guide
 
-Now there is a new easier way to translate RODA to another language, with no need for technical skills, using Transifex. To check how to translate RODA using just source code please refer to the section "Translate using source code" below.
+There is a new easier way to translate RODA to another language, with no need for technical skills, using Transifex. To check how to translate RODA using just source code please refer to the section "Translate using source code" below.
 
 ## Translate using Transifex
 
@@ -20,13 +20,14 @@ The existing message files containing localizable texts are listed below on RODA
 * src/main/resources/config/i18n/client/*.properties
 * src/main/resources/config/theme/*.html (these files, depending on the locale, may have a suffix in name like _Welcome_pt_PT.html_)
 
-When changing client properties, it is necessary to [recompile the project](https://github.com/keeps/roda/wiki/Developer-guide#build) to update them.
+When changing client properties, it is necessary to [recompile the project](_Developers_guide.md) to update them.
 
 ### Add a new language
 
 To add a new language (French, for example) to RODA-IN, one needs create a new text file  **src/main/resources/messages_fr.properties** or copy one of the existing ones in the same directory (like messages_en.properties) and replace the English sentences and words by the French versions, like in the following example.
 
 Extract from English version of **src/main/resources/messages_en.properties** 
+
 ```properties
 ...
 MainPanel.action.UPDATE=Update plan
@@ -34,7 +35,9 @@ MainPanel.action.CREATE_SIP=Create
 MainPanel.error.CREATE_SIP=An error occurred while creating package: %1$s
 ...
 ```
+
 Extract from French version **src/main/resources/messages_fr.properties** 
+
 ```properties
 ...
 MainPanel.action.UPDATE=Actualiser le plan
