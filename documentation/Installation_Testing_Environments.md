@@ -68,6 +68,3 @@ These are the steps to start `supervisord`:
 1. Create user 'roda': `sudo adduser roda`
 2. Add user 'roda' to 'docker' group: `sudo usermod -aG docker roda`
 3. Then restart supervisord (`sudo service supervisord restart`)
-
-
-

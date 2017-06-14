@@ -20,7 +20,7 @@
 ### New features
 
   * Using CAS (Central Authentication Service) as the authentication mechanism
-  * Added extended version FITS <https://github.com/keeps/fits/releases/tag/v0.8> to the ingest with support for technical metadata extraction of several new metadata types
+  * Added [extended version FITS](https://github.com/keeps/fits/releases/tag/v0.8) to the ingest with support for technical metadata extraction of several new metadata types
   * Added support for customized description level, defined in a properties file
 
 ### Improvements

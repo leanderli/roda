@@ -7,9 +7,9 @@ Do you have a burning question that is not here? Just [create an issue](https://
 
 ## How to add a new language to the system?
 
-Complete instructions on how to add a new language to the system are available at: [Translation guide](Translation_guide.md).
+Complete instructions on how to add a new language to the system are available at: [Translation guide](Translation_Guide.md).
 
 
 ## How to set up the development environment for RODA?
 
-Complete instructions on how to set up the development environment are available at: [Developers guide](Developers_guide.md).
+Complete instructions on how to set up the development environment are available at: [Developers guide](Developers_Guide.md).

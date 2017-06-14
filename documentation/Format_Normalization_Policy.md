@@ -59,4 +59,4 @@ In this page you will find the default mapping between formats and object classe
 | Image | METS+TIFF | image/mets+tiff | .xml .tiff | METS XML file with the structure and uncompressed TIFF images |
 | Audio | Wave | audio/wav | .wav | Wave audio format |
 | Video | MPEG-2 | video/mpeg2 | .mpeg .mpg |MPEG 2 video format, with DVD internal structure |
-| Database | SIARD 2 | TBD | TBD | TBD |
+| Database | SIARD 2 |  | .siard | Open format for archiving relational databases |

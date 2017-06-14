@@ -411,7 +411,7 @@ Follow the instructions to set up CAS and trust the self-signed certificates, th
 -server :keystore=/etc/cas/jetty/thekeystore,password=changeit -bindAddress 0.0.0.0
 ```
 
-And access RODA on [https://localhost:8888].
+And access RODA on (https://localhost:8888)[https://localhost:8888].
 
 If the keystore `/etc/cas/jetty/thekeystore` contains a single certificate (which will be the case when the instructions above were followed), that certificate will be used by GWT.
 

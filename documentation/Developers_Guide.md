@@ -28,9 +28,9 @@ RODA uses [Apache Maven](http://maven.apache.org/) build system. Being a multi-m
 
 The pre-requisites to build RODA are:
 
- * Git client
- * Apache Maven
- * Oracle Java 8
+* Git client
+* Apache Maven
+* Oracle Java 8
 
 To install all dependencies in Debian based systems execute:
 
@@ -61,7 +61,7 @@ After a successful compile, RODA web application will be available at `roda-ui/r
 
 ### Required software
 
-Besides the software needed to build RODA ([see the build section](#how-to-build-and-run)), you need:
+Besides the software needed to build RODA, you need:
 
 * Eclipse for Java ([Download page](http://www.eclipse.org/downloads/))
 * Eclipse Maven Plugin ([Download & install instructions](http://www.eclipse.org/m2e/download/))
@@ -115,8 +115,8 @@ RODA is structured as follows:
 
 ### /roda-common/
 
-* **roda-common-data** - TBD
-* **roda-common-utils** - TBD
+* **roda-common-data** - this module contains all RODA related model objects used in all other modules/projects
+* **roda-common-utils** - this module contains base utilities to be used by other modules/projects
 
 
 ## Contribute
@@ -135,7 +135,7 @@ To increase the changes of you code being accepted and merged into RODA source h
 
 ### Translations
 
-If you would like to translate RODA to a new language please read [Internationalization guidelines](Internationalization-guidelines).
+If you would like to translate RODA to a new language please read the [Translation Guide](Translation_Guide.md).
 
 ### External plugins
 
@@ -148,7 +148,7 @@ To create new plugins and use them to RODA it is necessary to:
 
 ## REST API
 
-RODA is completely controlled via a REST API. This is great to develop external services or integrate other applications  with the repository. The documentation of the API is available at https://demo.roda-community.org/api-docs/.
+RODA is completely controlled via a REST API. This is great to develop external services or integrate other applications  with the repository. The documentation of the API is available at [https://demo.roda-community.org/api-docs/](https://demo.roda-community.org/api-docs/).
 
 ### Developing 3rd party integrations
 

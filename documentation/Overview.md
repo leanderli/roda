@@ -24,7 +24,8 @@ RODA also implements a series of specifications and standards. To know more abou
 * Support for themess
 
 For more information, please fell free to visit RODA website:
-**<http://www.roda-community.org>**
+
+[http://www.roda-community.org](http://www.roda-community.org)
 
 
 ## Functions

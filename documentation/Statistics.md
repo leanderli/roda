@@ -1,8 +1,5 @@
 # Statistics
 
-TBD
-Bruno: Converte esta página que está no HELP do RODA para Markdown. Os exemplos de gráficos podem ficar de fora.
-
 This page provides information on how to configure new statistics based on the information available on the repository. It is important to acknowledge, that in order to understand this information one must be an advanced user with knowledge of HTML, CSS and Javascript.
 
 Statistics work by sending queries to RODA by means of its API (inspect the API documentation for more information), collecting the results and presenting them as graphics. The entire process is done on the client side by Javascript.

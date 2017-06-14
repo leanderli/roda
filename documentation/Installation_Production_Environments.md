@@ -127,7 +127,7 @@ libreoffice-pdfimport multiarch-support sysv-rc sysvinit-utils -y
 
 Download a [RODA release](https://github.com/keeps/roda/releases) and install on your application server following these instructions. 
 
-Alternatively, [download the source-code](https://github.com/keeps/roda) and compile with `mvn clean package`, the release will be at `roda-ui/roda-wui/target/roda-wui-*.war`. Also, check the [Developers guide](Developers_guide.md) for more information on this topic.
+Alternatively, [download the source-code](https://github.com/keeps/roda) and compile with `mvn clean package`, the release will be at `roda-ui/roda-wui/target/roda-wui-*.war`. Also, check the [Developers guide](Developers_Guide.md) for more information on this topic.
 
 To install in Apache Tomcat 8, find the `webapps` directory and copy the RODA WAR file there. Rename it to ROOT.war if you want it to be the default web application (also delete ROOT directory).
 Then you can start the service by running `./bin/startup.sh`.
@@ -178,5 +178,3 @@ core.plugins.internal.virus_check.clamav.get_version = clamdscan --version
 ### Advanced configurations
 
 For more information on how to adjust the repository to your particular needs, please contact [KEEP SOLUTIONS](http://www.keep.pt). We will be happy to provide you any support you require.
-
-

@@ -116,11 +116,7 @@ public class HTMLWidgetWrapper extends HTML {
             HTMLWidgetWrapper.this.setHTML(html);
             callback.onSuccess(null);
           } else if (response.getStatusCode() == 404) {
-            if (transformMarkdownIntoHTML) {
-              HistoryUtils.newHistory(Theme.RESOLVER, "Error404.md");
-            } else {
-              HistoryUtils.newHistory(Theme.RESOLVER, "Error404.html");
-            }
+            HistoryUtils.newHistory(Theme.RESOLVER, "Error404.html");
           } else {
             logger.error("Error sending request");
             callback.onFailure(new GenericException("Error sending request"));
