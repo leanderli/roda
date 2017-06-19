@@ -10,6 +10,7 @@
  */
 package org.roda.wui.common.client.widgets;
 
+import org.roda.core.data.common.RodaConstants;
 import org.roda.core.data.exceptions.GenericException;
 import org.roda.wui.client.main.Theme;
 import org.roda.wui.common.client.ClientLogger;
@@ -57,8 +58,7 @@ public class HTMLWidgetWrapper extends HTML {
     }
     if (id.endsWith(".md")) {
       isMarkdown = true;
-      // TODO bferreira: move "markdown/" to a constant
-      id = "markdown/" + id.substring(0, id.length() - 3);
+      id = RodaConstants.CORE_MARKDOWN_FOLDER + "/" + id.substring(0, id.length() - 3);
     }
 
     String locale = LocaleInfo.getCurrentLocale().getLocaleName();
@@ -104,10 +104,9 @@ public class HTMLWidgetWrapper extends HTML {
               // fix image links by replacing them with proper
               // "#theme/images/..." links
               RegExp imgRegExp = RegExp.compile("<img src=\"(images/.*?)\"", "g");
-              // TODO bferreira: move "markdown/" to a constant
               String imgReplacement = ("<img src=\""
                 + RestUtils.createThemeResourceUri(filenameToken, null, false).asString() + "\"").replace(filenameToken,
-                  "markdown/$1");
+                RodaConstants.CORE_MARKDOWN_FOLDER  + "/$1");
 
               html = imgRegExp.replace(html, imgReplacement);
             } else {
