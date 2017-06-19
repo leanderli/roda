@@ -381,11 +381,6 @@ public class SeleniumUtils {
       WebElement helpMenu = driver.findElement(By.className("help_menu_item"));
       helpMenu.click();
       saveHTML();
-
-      // installing descriptive metadata formats help page
-      driver.get(url + "#theme/InstallingNewDescriptiveMetadataFormats.html");
-      saveHTML();
-      goBack();
     } catch (FileNotFoundException | UnsupportedEncodingException | InterruptedException e) {
       System.err.println("Error running Selenium on help pages");
     }
