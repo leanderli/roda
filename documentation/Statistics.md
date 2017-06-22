@@ -31,7 +31,7 @@ Total No. of fonds
 
 Distribution of description levels
 
-![Distribution of description levels](images/distribution_description_levels_pie.png "Distribution of description levels")
+![Distribution of description levels](images/distribution_description_levels_pie.png?raw=true "Distribution of description levels")
 
 ```html
 <canvas class="statistic"
