@@ -4,6 +4,10 @@
   Chart.defaults.global.defaultFontColor = "#222";
   Chart.defaults.global.elements.arc.borderColor = "#fff";
   Chart.defaults.global.elements.arc.borderWidth = "1";
+  Chart.defaults.doughnut.aspectRatio = 2;
+  Chart.defaults.pie.aspectRatio = 2;
+  Chart.defaults.polarArea.aspectRatio = 2;
+  Chart.defaults.radar.aspectRatio = 2;
 
   $.fn.statistic = function() {
     var matchedObject = this;
