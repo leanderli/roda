@@ -8,7 +8,7 @@ As secções a seguir fornecem trechos de código que podem ser usados ​​par
 
 ## Índice AIP
 
-No. total de registos descritivos
+**No. total de registos descritivos**
 
 ```html
 <span class="statistic"
@@ -18,7 +18,7 @@ No. total de registos descritivos
   data-view-field="totalCount"></span>
 ```
 
-No. total de fundos
+**No. total de fundos**
 
 ```html
 <span class="statistic"
@@ -29,8 +29,9 @@ No. total de fundos
   data-view-field="totalCount"></span>
 ```
 
-Distribuição dos níveis descritivos
+**Distribuição dos níveis descritivos**
 
+![Distribution of description levels](images/distribution_of_description_levels_pie.png "Distribution of description levels")
 
 ```html
 <canvas class="statistic"
@@ -38,13 +39,14 @@ Distribuição dos níveis descritivos
         data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
         data-source-facets="level"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie"></canvas>
 ```
 
 ## Índice de representações
 
-No. total de representações
+**No. total de representações**
 
 ```html
 <span class="statistic"
@@ -54,7 +56,9 @@ No. total de representações
   data-view-field="totalCount"></span>
 ```
 
-Distribuição dos tipos de representações
+**Distribuição dos tipos de representações**
+
+![Distribution of representation types](images/distribution_of_representation_types_bar.png "Distribution of representation types")
 
 ```html
 <canvas class="statistic"
@@ -62,13 +66,14 @@ Distribuição dos tipos de representações
         data-source-class="org.roda.core.data.v2.ip.IndexedRepresentation"
         data-source-facets="type"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="bar"></canvas>
 ```
 
 ## Índice de ficheiros
 
-No. total de ficheiros
+**No. total de ficheiros**
 
 ```html
 <span class="statistic"
@@ -78,7 +83,9 @@ No. total de ficheiros
   data-view-field="totalCount"></span>
 ```
 
-Distribuição de mimetypes
+**Distribuição de mimetypes**
+
+![Distribution of mimetypes](images/distribution_of_mimetypes_pie.png "Distribution of mimetypes")
 
 ```html
 <canvas class="statistic"
@@ -86,11 +93,14 @@ Distribuição de mimetypes
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatMimetype"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie"></canvas>
 ```
 
-Distribuição de PRONOM IDs
+**Distribuição de PRONOM IDs**
+
+![Distribution of PRONOM IDs](images/distribution_of_pronom_ids_doughnut.png "Distribution of PRONOM IDs")
 
 ```html
 <canvas class="statistic"
@@ -98,13 +108,14 @@ Distribuição de PRONOM IDs
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="doughnut"></canvas>
 ```
 
 ## Índice de processos
 
-No. total de processos de ingestão
+**No. total de processos de ingestão**
 
 ```html
 <span class="statistic"
@@ -116,9 +127,9 @@ No. total de processos de ingestão
   data-view-field="totalCount"></span>
 ```
 
-## Índice de registros
+## Índice de registos
 
-No. total de logins
+**No. total de logins**
 
 ```html
 <span class="statistic"
@@ -129,7 +140,7 @@ No. total de logins
   data-view-field="totalCount"></span>
 ```
 
-No. total de logins falhados
+**No. total de logins falhados**
 
 ```html
 <span class="statistic"
@@ -140,7 +151,9 @@ No. total de logins falhados
   data-view-field="totalCount"></span>
 ```
 
-Login com sucesso vs falhados
+**Login com sucesso vs falhados**
+
+![Successful vs failed logins](images/successful_vs_failed_logins_pie.png "Successful vs failed logins")
 
 ```html
 <canvas class="statistic"
@@ -149,15 +162,18 @@ Login com sucesso vs falhados
         data-source-filters="actionComponent=org.roda.wui.api.controllers.UserLogin, actionMethod=login"
         data-source-facets="state"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie"></canvas>
 ```
 
-# Outros gráficos
+## Outros gráficos
 
-## Gráficos de linhas
+### Gráficos de linhas
 
-Distribuição de nivel descritivos
+**Distribuição de nivel descritivos**
+
+![Description level distribution](images/description_level_distribution_line.png "Description level distribution")
 
 ```html
 <canvas class="statistic"
@@ -165,13 +181,16 @@ Distribuição de nivel descritivos
         data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
         data-source-facets="level"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="line"></canvas>
 ```
 
-## Gráficos de radar
+### Gráficos de radar
 
-Distribuição de formatos PRONOM
+**Distribuição de formatos PRONOM**
+
+![Pronom format distribution](images/pronom_format_distribution_radar.png "Pronom format distribution")
 
 ```html
 <canvas class="statistic"
@@ -179,13 +198,16 @@ Distribuição de formatos PRONOM
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="radar"></canvas>
 ```
 
-## Gráficos polares
+### Gráficos polares
 
-Distribuição de formatos PRONOM
+**Distribuição de formatos PRONOM**
+
+![Pronom format distribution](images/pronom_format_distribution_polararea.png "Pronom format distribution")
 
 ```html
 <canvas class="statistic"
@@ -193,13 +215,16 @@ Distribuição de formatos PRONOM
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="polarArea"></canvas>
 ```
 
-## Função personalizada para manipular dados de facetas
+### Função personalizada para manipular dados de facetas
 
-Distribuição de formatos PRONOM
+**Distribuição de formatos PRONOM**
+
+![Pronom format distribution](images/pronom_format_distribution_function.png "Pronom format distribution")
 
 ```html
 <canvas class="statistic"
@@ -207,6 +232,7 @@ Distribuição de formatos PRONOM
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="function"
         data-view-type-function="facetCustomDataHandlerChartOptions"></canvas>
@@ -241,9 +267,11 @@ Distribuição de formatos PRONOM
 </script>
 ```
 
-## Função personalizada para criar gráfico
+### Função personalizada para criar gráfico
 
-Gráfico de bolhas
+**Gráfico de bolhas**
+
+![Bubble chart](images/bubble_chart.png "Bubble chart")
 
 ```html
 <canvas class="statistic"

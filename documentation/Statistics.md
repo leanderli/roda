@@ -39,6 +39,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
         data-source-facets="level"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie"></canvas>
 ```
@@ -65,6 +66,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedRepresentation"
         data-source-facets="type"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="bar"></canvas>
 ```
@@ -91,6 +93,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatMimetype"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie"></canvas>
 ```
@@ -105,6 +108,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="doughnut"></canvas>
 ```
@@ -158,6 +162,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-filters="actionComponent=org.roda.wui.api.controllers.UserLogin, actionMethod=login"
         data-source-facets="state"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie"></canvas>
 ```
@@ -176,6 +181,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
         data-source-facets="level"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="line"></canvas>
 ```
@@ -192,6 +198,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="radar"></canvas>
 ```
@@ -208,6 +215,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="polarArea"></canvas>
 ```
@@ -224,6 +232,7 @@ The following sections provide code snippets that one can use to display statist
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="function"
         data-view-type-function="facetCustomDataHandlerChartOptions"></canvas>
