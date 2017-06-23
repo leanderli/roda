@@ -62,6 +62,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
                 data-source-facets="level"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="pie"></canvas>
     </div>
@@ -73,6 +74,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
         data-source-facets="level"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie">&lt;/canvas>
             </code>
@@ -105,6 +107,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedRepresentation"
                 data-source-facets="type"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="bar"></canvas>
     </div>
@@ -116,6 +119,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedRepresentation"
         data-source-facets="type"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="bar">&lt;/canvas>
             </code>
@@ -148,6 +152,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedFile"
                 data-source-facets="formatMimetype"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="pie"></canvas>
     </div>
@@ -159,6 +164,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatMimetype"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie">&lt;/canvas>
             </code>
@@ -172,6 +178,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedFile"
                 data-source-facets="formatPronom"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="doughnut"></canvas>
     </div>
@@ -183,6 +190,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="doughnut">&lt;/canvas>
             </code>
@@ -261,6 +269,7 @@
                 data-source-filters="actionComponent=org.roda.wui.api.controllers.UserLogin, actionMethod=login"
                 data-source-facets="state"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="pie"></canvas>
     </div>
@@ -273,6 +282,7 @@
         data-source-filters="actionComponent=org.roda.wui.api.controllers.UserLogin, actionMethod=login"
         data-source-facets="state"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="pie">&lt;/canvas>
             </code>
@@ -289,6 +299,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
                 data-source-facets="level"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="line"></canvas>
     </div>
@@ -300,6 +311,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedAIP"
         data-source-facets="level"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="line">&lt;/canvas>
             </code>
@@ -314,6 +326,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedFile"
                 data-source-facets="formatPronom"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="radar"></canvas>
     </div>
@@ -325,6 +338,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="radar">&lt;/canvas>
             </code>
@@ -339,6 +353,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedFile"
                 data-source-facets="formatPronom"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="polarArea"></canvas>
     </div>
@@ -350,6 +365,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="polarArea">&lt;/canvas>
             </code>
@@ -364,6 +380,7 @@
                 data-source-class="org.roda.core.data.v2.ip.IndexedFile"
                 data-source-facets="formatPronom"
                 data-view="chart"
+                data-view-limit="10"
                 data-view-field="facetResults"
                 data-view-type="function"
                 data-view-type-function="facetCustomDataHandlerChartOptions"></canvas>
@@ -389,8 +406,7 @@
                             }]
                         },
                         options: {
-                            cutoutPercentage: 90,
-                            aspectRatio: 1
+                            cutoutPercentage: 90
                         }
                     };
                 }
@@ -406,6 +422,7 @@
         data-source-class="org.roda.core.data.v2.ip.IndexedFile"
         data-source-facets="formatPronom"
         data-view="chart"
+        data-view-limit="10"
         data-view-field="facetResults"
         data-view-type="function"
         data-view-type-function="facetCustomDataHandlerChartOptions">&lt;/canvas>
@@ -431,8 +448,7 @@
                     }]
                 },
                 options: {
-                    cutoutPercentage: 90,
-                    aspectRatio: 1
+                    cutoutPercentage: 90
                 }
             };
         }

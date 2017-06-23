@@ -4,10 +4,6 @@
   Chart.defaults.global.defaultFontColor = "#222";
   Chart.defaults.global.elements.arc.borderColor = "#fff";
   Chart.defaults.global.elements.arc.borderWidth = "1";
-  Chart.defaults.doughnut.aspectRatio = 2;
-  Chart.defaults.pie.aspectRatio = 2;
-  Chart.defaults.polarArea.aspectRatio = 2;
-  Chart.defaults.radar.aspectRatio = 2;
 
   $.fn.statistic = function() {
     var matchedObject = this;
@@ -72,7 +68,7 @@
         }
       }
     }
-    
+
     function buildDataUrl(element) {
     	buildDataUrl(element, false);
     }
@@ -92,7 +88,7 @@
         return "facet=" + facet
       }).join("&");
 
-      
+
       var onlyActive = $(element).data("source-only-active") || "false";
       var lang = document.locale;
 
@@ -109,7 +105,7 @@
 	      var start = $(element).data("source-start") || 0;
 	      var limit = $(element).data("source-limit") || 0;
 	      var facetLimit = $(element).data("view-limit") || 100;
-	
+
 	      url = pathname + "api/v1/index?returnClass=" +
 	          returnClass + "&" +
 	          filterParams + "&" +
@@ -380,7 +376,7 @@
 
   $(window).ready(
     function() {
-    	
+
 	  $(document).on('DOMNodeInserted', ".chartjs-hidden-iframe", function(e) {
 		elem = e.target;
 		$(elem).attr("title", "statistic_frame");
