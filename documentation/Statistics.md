@@ -8,7 +8,7 @@ The following sections provide code snippets that one can use to display statist
 
 ## AIP Index
 
-Total No. of descriptive records
+**Total No. of descriptive records**
 
 ```html
 <span class="statistic"
@@ -18,7 +18,7 @@ Total No. of descriptive records
   data-view-field="totalCount"></span>
 ```
 
-Total No. of fonds
+**Total No. of fonds**
 
 ```html
 <span class="statistic"
@@ -29,7 +29,7 @@ Total No. of fonds
   data-view-field="totalCount"></span>
 ```
 
-Distribution of description levels
+**Distribution of description levels**
 
 ![Distribution of description levels](images/distribution_of_description_levels_pie.png "Distribution of description levels")
 
@@ -45,7 +45,7 @@ Distribution of description levels
 
 ## Representations Index
 
-Total No. of Representations
+**Total No. of Representations**
 
 ```html
 <span class="statistic"
@@ -55,7 +55,7 @@ Total No. of Representations
   data-view-field="totalCount"></span>
 ```
 
-Distribution of representation types
+**Distribution of representation types**
 
 ![Distribution of representation types](images/distribution_of_representation_types_bar.png "Distribution of representation types")
 
@@ -71,7 +71,7 @@ Distribution of representation types
 
 ## Files index
 
-Total No. of files
+**Total No. of files**
 
 ```html
 <span class="statistic"
@@ -81,7 +81,7 @@ Total No. of files
   data-view-field="totalCount"></span>
 ```
 
-Distribution of mimetypes
+**Distribution of mimetypes**
 
 ![Distribution of mimetypes](images/distribution_of_mimetypes_pie.png "Distribution of mimetypes")
 
@@ -95,7 +95,7 @@ Distribution of mimetypes
         data-view-type="pie"></canvas>
 ```
 
-Distribution of PRONOM IDs
+**Distribution of PRONOM IDs**
 
 ![Distribution of PRONOM IDs](images/distribution_of_pronom_ids_doughnut.png "Distribution of PRONOM IDs")
 
@@ -111,7 +111,7 @@ Distribution of PRONOM IDs
 
 ## Job index
 
-Total No. of Ingest jobs
+**Total No. of Ingest jobs**
 
 ```html
 <span class="statistic"
@@ -125,7 +125,7 @@ Total No. of Ingest jobs
 
 ## Log index
 
-Total No. of logins
+**Total No. of logins**
 
 ```html
 <span class="statistic"
@@ -136,7 +136,7 @@ Total No. of logins
   data-view-field="totalCount"></span>
 ```
 
-Total No. of failed logins
+**Total No. of failed logins**
 
 ```html
 <span class="statistic"
@@ -147,7 +147,7 @@ Total No. of failed logins
   data-view-field="totalCount"></span>
 ```
 
-Successful vs failed logins
+**Successful vs failed logins**
 
 ![Successful vs failed logins](images/successful_vs_failed_logins_pie.png "Successful vs failed logins")
 
@@ -162,11 +162,11 @@ Successful vs failed logins
         data-view-type="pie"></canvas>
 ```
 
-Other charts
+## Other charts
 
-Line charts
+### Line charts
 
-Description level distribution
+**Description level distribution**
 
 ![Description level distribution](images/description_level_distribution_line.png "Description level distribution")
 
@@ -180,9 +180,9 @@ Description level distribution
         data-view-type="line"></canvas>
 ```
 
-Radar charts
+### Radar charts
 
-Pronom format distribution
+**Pronom format distribution**
 
 ![Pronom format distribution](images/pronom_format_distribution_radar.png "Pronom format distribution")
 
@@ -196,9 +196,9 @@ Pronom format distribution
         data-view-type="radar"></canvas>
 ```
 
-Polar area charts
+### Polar area charts
 
-Pronom format distribution
+**Pronom format distribution**
 
 ![Pronom format distribution](images/pronom_format_distribution_polararea.png "Pronom format distribution")
 
@@ -212,9 +212,9 @@ Pronom format distribution
         data-view-type="polarArea"></canvas>
 ```
 
-Custom function to handle facet data
+### Custom function to handle facet data
 
-Pronom format distribution
+**Pronom format distribution**
 
 ![Pronom format distribution](images/pronom_format_distribution_function.png "Pronom format distribution")
 
@@ -258,9 +258,9 @@ Pronom format distribution
 </script>
 ```
 
-Custom function to create chart
+### Custom function to create chart
 
-Bubble chart
+**Bubble chart**
 
 ![Bubble chart](images/bubble_chart.png "Bubble chart")
 
