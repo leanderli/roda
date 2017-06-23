@@ -31,7 +31,7 @@ Total No. of fonds
 
 Distribution of description levels
 
-![Distribution of description levels](images/distribution_description_levels_pie.png "Distribution of description levels")
+![Distribution of description levels](images/distribution_of_description_levels_pie.png "Distribution of description levels")
 
 ```html
 <canvas class="statistic"
@@ -57,6 +57,8 @@ Total No. of Representations
 
 Distribution of representation types
 
+![Distribution of representation types](images/distribution_of_representation_types_bar.png "Distribution of representation types")
+
 ```html
 <canvas class="statistic"
         data-source="index"
@@ -81,6 +83,8 @@ Total No. of files
 
 Distribution of mimetypes
 
+![Distribution of mimetypes](images/distribution_of_mimetypes_pie.png "Distribution of mimetypes")
+
 ```html
 <canvas class="statistic"
         data-source="index"
@@ -92,6 +96,8 @@ Distribution of mimetypes
 ```
 
 Distribution of PRONOM IDs
+
+![Distribution of PRONOM IDs](images/distribution_of_pronom_ids_doughnut.png "Distribution of PRONOM IDs")
 
 ```html
 <canvas class="statistic"
@@ -143,6 +149,8 @@ Total No. of failed logins
 
 Successful vs failed logins
 
+![Successful vs failed logins](images/successful_vs_failed_logins_pie.png "Successful vs failed logins")
+
 ```html
 <canvas class="statistic"
         data-source="index"
@@ -160,6 +168,8 @@ Line charts
 
 Description level distribution
 
+![Description level distribution](images/description_level_distribution_line.png "Description level distribution")
+
 ```html
 <canvas class="statistic"
         data-source="index"
@@ -173,6 +183,8 @@ Description level distribution
 Radar charts
 
 Pronom format distribution
+
+![Pronom format distribution](images/pronom_format_distribution_radar.png "Pronom format distribution")
 
 ```html
 <canvas class="statistic"
@@ -188,6 +200,8 @@ Polar area charts
 
 Pronom format distribution
 
+![Pronom format distribution](images/pronom_format_distribution_polararea.png "Pronom format distribution")
+
 ```html
 <canvas class="statistic"
         data-source="index"
@@ -201,6 +215,8 @@ Pronom format distribution
 Custom function to handle facet data
 
 Pronom format distribution
+
+![Pronom format distribution](images/pronom_format_distribution_function.png "Pronom format distribution")
 
 ```html
 <canvas class="statistic"
@@ -245,6 +261,8 @@ Pronom format distribution
 Custom function to create chart
 
 Bubble chart
+
+![Bubble chart](images/bubble_chart.png "Bubble chart")
 
 ```html
 <canvas class="statistic"
